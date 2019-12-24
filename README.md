@@ -1,1 +1,1 @@
-# Wine Qualitya Analysis
+# Wine Quality Analysis
