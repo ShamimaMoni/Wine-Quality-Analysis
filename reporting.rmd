@@ -29,7 +29,6 @@ It might be good to add the standard deviation and the number of data.
 
 ```{r}
 tab <- NULL
-tab3 <- NULL
 for(i in colnames(d)){
   x <- d[,i]
   if(is.numeric(x) && i != "Grade" & i != "producer code"){
