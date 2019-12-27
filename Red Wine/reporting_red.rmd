@@ -81,7 +81,7 @@ for(i in 1:nrow(d)){
 
 par(mgp=c(2, 1, 0), mar=c(3, 3, 3, 1), cex=0.66)
 for (i in colnames(d) ){
-  if(is.numeric(d[,i]) && i != "Grade" & i != "producer code"){
+  if(is.numeric(d[,i]) && i != "Grade" && i != "producer code"){
      plot(d[,i],jitter(d[,"Grade"]),xlab=i,
           ylab="quality", col="blue", cex=0.8, cex.lab=1.3)
      abline(lm(d[, "Grade"] ~ d[,i]),lty=2,lwd=2)
@@ -99,4 +99,11 @@ for(i in colnames(d)){
 	     if (x[j]!=0) x[j]<- log10(x[j])}
         h<- hist(x, main=i, breaks=30,xlab="")}
 }
+for(i in colnames(d)){
+  x <- d[,i]
+  if (i != "Grade" && i != "producer code" && i != "rating" && i!="Type" && i != "Producer Name"){
+      boxplot(x~Grade,data=d,main="Different boxplots for each grade",xlab="Grade",
+            ylab=i,col="orange",border="brown")}
+}
+
 ```
