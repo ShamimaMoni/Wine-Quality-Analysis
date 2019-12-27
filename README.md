@@ -31,6 +31,16 @@ Now let's break the Tartaric Acid Value and see what's in there. The boxplot of 
 </p>
 Nobody gave 3,4 or 8 rating for Tartaric Acid greater than 14 and there are no outliers for 3,7 or 8 rating for tartaric acid less than 14.
 
+<h3> Acetic Acid </h3>
+Now let's break the Acetic Acid Value and see what's in there. The boxplot of acetic acid concentration greater than anf less than 1.05 for different grade is given below:
+
+<p align="center">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/aceticgreater1.05.png">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/aceticless1.05.png">
+  
+</p>
+Nobody gave 6,7 or 8 rating for acetic Acid greater than 1.05 and there are no outliers for 3,4 or 8 rating for acetic acid less than 1.05.
+
 <h3> Acidity vs Grade </h3>
 <p align="center">
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/tartaricacidboxplot.png">
