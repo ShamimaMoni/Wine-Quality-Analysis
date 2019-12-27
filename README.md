@@ -14,7 +14,7 @@ Tartaric Acis has almost normal distribution. Wines having tartaric acid concent
 But Acetic Acid and Citric Acid does not have a normal distribution. To see if there is any normality, log10(Acetic Acid) vs Grade and log10(Citric Acid) vs Grade is plotted.
 
 <p align="center">
-  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/acticacidlogdistribution.png">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/aceticacidlogdistribution.png">
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/citricacidlogdistribution.png">
   
 </p>
@@ -24,7 +24,22 @@ Still no normality is not seen in citric acid concentration histogram rather the
 <h3> Tartaric Acid </h3>
 Now let's break the Tartaric Acid Value and see what's in there. The boxplot of tartaric acid concentration greater than anf less than 14 for different grade is given below:
 
+<p align="center">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/tartaricgreater14.png">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/tartaricless14.png">
+  
+</p>
+Nobody gave 3,4 or 8 rating for Tartaric Acid greater than 14 and there are no outliers for 3,7 or 8 rating for tartaric acid less than 14.
 
+<h3> Acetic Acid </h3>
+Now let's break the Acetic Acid Value and see what's in there. The boxplot of acetic acid concentration greater than anf less than 1.05 for different grade is given below:
+
+<p align="center">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/aceticgreater1.05.png">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/aceticless1.05.png">
+  
+</p>
+Nobody gave 6,7 or 8 rating for acetic Acid greater than 1.05 and there are no outliers for 3,4 or 8 rating for acetic acid less than 1.05.
 
 <h3> Acidity vs Grade </h3>
 <p align="center">
