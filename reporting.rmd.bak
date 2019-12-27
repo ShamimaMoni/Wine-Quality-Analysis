@@ -57,6 +57,8 @@ for(i in colnames(d)){
   x <- d[,i]
   if(is.numeric(x) && i != "Grade" & i != "producer code"){
      h<- hist(x, main=i, xlab="")
+#Add smoothed density function to histogram, smoothness toggled using
+#"adjust" parameter
      xfit<-seq(min(x),max(x),length=40)
      yfit<-dnorm(xfit,mean=mean(x),sd=sd(x))
      yfit <- yfit*diff(h$mids[1:2])*length(x)
