@@ -67,3 +67,10 @@ Residual Sugar Concentration plot without and with log transformation:
 </p>
 
 The log transformation gives a slightly better normal distribution but a right skewed plot. Wines having sugar concentration less than 6.8 is higher in number though the range is 14.
+
+If we look at the boxplot of the Residual sugar concentration, Sugar Greater than 6.8 and sugar less than 6.8, we find:
+<p align="center">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/sugarboxplot.png">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/sugargreater6.8.png">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/sugarless6.8c.png">
+</p>
