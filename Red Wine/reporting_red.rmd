@@ -7,7 +7,7 @@ output: word_document
 
 ```{r include = FALSE}
 # Preprocessing, such as loading a package. Do not display in reports.
-  ifile <- "redwinequality.csv"
+  ifile <- "winequality-red.csv"
   
 # Read csv file into data frame
   d <-read.csv (ifile, check.names = F)
@@ -56,12 +56,36 @@ par(mgp=c(2, 1, 0), mar=c(3, 3, 3, 1), xaxs="i", yaxs="i", cex=.7)
 for(i in colnames(d)){
   x <- d[,i]
   if(is.numeric(x) && i != "Grade" & i != "producer code"){
-     h<- hist(x, main=i, xlab="")
-     xfit<-seq(min(x),max(x),length=40)
+     h<- hist(x, main=i, breaks=20,xlab="")
+     xfit<-seq(min(x),max(x),length=80)
      yfit<-dnorm(xfit,mean=mean(x),sd=sd(x))
      yfit <- yfit*diff(h$mids[1:2])*length(x)
      lines(xfit, yfit, col="red")}
   else      barplot(table(x), main=i, xlab="")
 }
 ```
+```{r, cache=FALSE}
+x1 <- NULL
+x2 <- NULL
+x3 <- NULL
 
+for(i in 1:nrow(d)){
+    if (d[i,13]=="Satisfactory")  x1 <- rbind(x1,d[i,])
+    else if (d[i,13]=="Good")  x2 <- rbind(x2,d[i,])
+    else  x3 <- rbind(x3,d[i,])
+}
+
+```
+
+```{r, cache=FALSE}
+
+par(mgp=c(2, 1, 0), mar=c(3, 3, 3, 1), cex=0.66)
+for (i in colnames(d) ){
+  if(is.numeric(d[,i]) && i != "Grade" & i != "producer code"){
+     plot(d[,i],jitter(d[,"Grade"]),xlab=i,
+          ylab="quality", col="blue", cex=0.8, cex.lab=1.3)
+     abline(lm(d[, "Grade"] ~ d[,i]),lty=2,lwd=2)
+    }
+}
+
+```
