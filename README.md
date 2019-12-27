@@ -22,6 +22,8 @@ But Acetic Acid and Citric Acid does not have a normal distribution. To see if t
 Still no normality is not seen in citric acid concentration histogram rather there are a lots of peaks which is bad. But acetic acid concentraion histogram shows a right skewed log-normal distribution.
 
 <h3> Tartaric Acid </h3>
+Now let's break the Tartaric Acid Value and see what's in there. The boxplot of tartaric acid concentration greater than anf less than 14 for different grade is given below:
+
 
 
 <h3> Acidity vs Grade </h3>
