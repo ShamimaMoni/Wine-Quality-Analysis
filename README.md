@@ -55,3 +55,5 @@ From the boxplots, we can see that the rating increases with the increase in cit
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/acetictartaric.png">
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/citricacetic.png">
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/citrictartaric.png">
+
+Acetic and Tartaric as well as Citric and Acetic acid has an inversely proportional relationship whereas Citric anmd Tartaric Acid has a proportional relationship
