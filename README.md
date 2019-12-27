@@ -60,7 +60,10 @@ From the boxplots, we can see that the rating increases with the increase in cit
 Acetic and Tartaric as well as Citric and Acetic acid has an inversely proportional relationship whereas Citric anmd Tartaric Acid has a proportional relationship. The value of acetic acid is less than 0.6 and the value of citric acid is less than 0.75 for a high quality wine.
 
 <h3> Residual Sugar Study </h3>
+Residual Sugar Concentration plot without and with log transformation:
 <p align="center">
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/residualsugar.png">
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/residualsugarlog.png">
 </p>
+
+The log transformation gives a slightly better normal distribution but a right skewed plot. Wines having sugar concentration less than 6.8 is higher in number though the range is 14.
