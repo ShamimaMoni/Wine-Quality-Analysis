@@ -1,0 +1,69 @@
+---
+title: "Data Visualization"
+Author: 'Mst. Shamima Hossain'
+date: "`r format (Sys.time (), '%Y/%m/%d') `"
+output: word_document
+---
+
+```{r include = FALSE}
+# Preprocessing, such as loading a package. Do not display in reports.
+  ifile <- "winequality.csv"
+  
+# Read csv file into data frame
+  d <-read.csv (ifile, check.names = F)
+  # If you want to use the $notation for data frames, check.names=T
+  # If you don't want the symbols in the header to be converted, check.names=F
+  
+opts_chunk$set(fig.width=3, fig.height=2.7, echo=FALSE, cache=FALSE, message=FALSE)
+```
+
+# Overview
+
+Visualize the data in `r ifile`.
+
+## Basic Statistics
+
+Minimum, median, maximum, average, and quartile.
+
+It might be good to add the standard deviation and the number of data.
+
+```{r}
+tab <- NULL
+for(i in colnames(d)){
+  x <- d[,i]
+  if(is.numeric(x) && i != "Grade" & i != "producer code"){
+    tab <- rbind(tab, round(summary(x), digits=4))
+    rownames(tab)[nrow(tab)] <- i
+  } else {
+    tab2 <- table(x)
+	tab2<- as.data.frame(tab2)
+	colnames(tab2)[1]<-i
+	x1 <- kable(tab2, format = "pandoc")
+    cat(x1, sep = "\n")
+	cat(sep="\n")
+	}
+	
+}
+kable(tab)
+```
+
+## Visibility per Item
+
+Numerical data is shown as a histogram, and category data is shown as a bar graph.
+
+```{r}
+par(mgp=c(2, 1, 0), mar=c(3, 3, 3, 1), xaxs="i", yaxs="i", cex=.7)
+for(i in colnames(d)){
+  x <- d[,i]
+  if(is.numeric(x) && i != "Grade" & i != "producer code"){
+     h<- hist(x, main=i, xlab="")
+#Add smoothed density function to histogram, smoothness toggled using
+#"adjust" parameter
+     xfit<-seq(min(x),max(x),length=40)
+     yfit<-dnorm(xfit,mean=mean(x),sd=sd(x))
+     yfit <- yfit*diff(h$mids[1:2])*length(x)
+     lines(xfit, yfit, col="red")}
+  else      barplot(table(x), main=i, xlab="")
+}
+```
+
