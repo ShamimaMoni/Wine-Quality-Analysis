@@ -24,7 +24,12 @@ Still no normality is not seen in citric acid concentration histogram rather the
 <h3> Tartaric Acid </h3>
 Now let's break the Tartaric Acid Value and see what's in there. The boxplot of tartaric acid concentration greater than anf less than 14 for different grade is given below:
 
-
+<p align="center">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/tartaricgreater14.png">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/tartaricless14.png">
+  
+</p>
+Nobody gave 3,4 or 8 rating for Tartaric Acid greater than 14 and there are no outliers for 3,7 or 8 rating for tartaric acid less than 14.
 
 <h3> Acidity vs Grade </h3>
 <p align="center">
