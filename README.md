@@ -50,3 +50,10 @@ Nobody gave 6,7 or 8 rating for acetic Acid greater than 1.05 and there are no o
 </p>
 
 From the boxplots, we can see that the rating increases with the increase in citric acid concentartion and with the decrease in acetic acid concentration. Tartaric acid concentration has almost no effect on the grade of the wine.
+
+<p align="center">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/acetictartaric.png">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/citricacetic.png">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/citrictartaric.png">
+
+Acetic and Tartaric as well as Citric and Acetic acid has an inversely proportional relationship whereas Citric anmd Tartaric Acid has a proportional relationship. The value of acetic acid is less than 0.6 and the value of citric acid is less than 0.75 for a high quality wine.
