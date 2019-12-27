@@ -9,15 +9,22 @@
   
 </p>
 
-Tartaric Acis and Acetic Acid has almost normal distribution. But Citric Acid does not have a normal distribution. To see if there is any normality, log10(Citric Acid) vs quality is plotted.
+Tartaric Acis has almost normal distribution. Wines having tartaric acid concentration greater than 14 is very low. Also wines having acetic acid concentration greater than 1.05 is very low though the range is about 1.6.
+
+But Acetic Acid and Citric Acid does not have a normal distribution. To see if there is any normality, log10(Acetic Acid) vs Grade and log10(Citric Acid) vs Grade is plotted.
 
 <p align="center">
-  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/citricaciddistribution.png">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/acticacidlogdistribution.png">
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/citricacidlogdistribution.png">
   
 </p>
 
-Still no normality is not seen rather there are a lots of peaks which is bad.
+Still no normality is not seen in citric acid concentration histogram rather there are a lots of peaks which is bad. But acetic acid concentraion histogram shows a right skewed log-normal distribution.
+
+<h3> Tartaric Acid </h3>
+Now let's break the Tartaric Acid Value and see what's in there. The boxplot of tartaric acid concentration greater than anf less than 14 for different grade is given below:
+
+
 
 <h3> Acidity vs Grade </h3>
 <p align="center">
@@ -27,4 +34,4 @@ Still no normality is not seen rather there are a lots of peaks which is bad.
   
 </p>
 
-From the boxplots, we can see that the rating increases with the increase in citric acid concentartion and with the decrease in acetic acid concentration. Tartaric acid concentration has no effect on the grade of the wine.
+From the boxplots, we can see that the rating increases with the increase in citric acid concentartion and with the decrease in acetic acid concentration. Tartaric acid concentration has almost no effect on the grade of the wine.
