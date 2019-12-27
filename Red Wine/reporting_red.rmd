@@ -89,3 +89,14 @@ for (i in colnames(d) ){
 }
 
 ```
+
+```{r}
+par(mgp=c(2, 1, 0), mar=c(3, 3, 3, 1), xaxs="i", yaxs="i", cex=.7)
+for(i in colnames(d)){
+  x <- d[,i]
+  if(i == "Citric"){
+        for (j in (1:length(x))){
+	     if (x[j]!=0) x[j]<- log10(x[j])}
+        h<- hist(x, main=i, breaks=30,xlab="")}
+}
+```
