@@ -167,3 +167,20 @@ ggplot(data = d,
   scale_color_brewer(type='seq',
                    guide=guide_legend(title='Quality'))
 ```
+```{r}
+sugargreater6.8 <- subset(d, Residualsugar >= 6.8)
+sugarless6.8 <- subset(d, Residualsugar < 6.8)
+
+
+ggplot(sugargreater6.8, aes(x=Grade, y=Residualsugar, fill=as.factor(Grade))) +
+    geom_boxplot(alpha=0.7) +
+    stat_summary(fun.y=mean, geom="point", shape=20, size=4, color="red", fill="red") +
+    theme(legend.position="none") +
+    scale_fill_brewer(palette="Set1")
+
+ggplot(sugarless6.8, aes(x=Grade, y=Residualsugar, fill=as.factor(Grade))) +
+    geom_boxplot(alpha=0.7) +
+    stat_summary(fun.y=mean, geom="point", shape=20, size=4, color="red", fill="red") +
+    theme(legend.position="none") +
+    scale_fill_brewer(palette="Set1")
+```
