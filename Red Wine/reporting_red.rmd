@@ -107,3 +107,63 @@ for(i in colnames(d)){
 }
 
 ```
+
+```{r}
+tartaricgreater14 <- subset(d, TartaricAcid >= 14)
+tartaricless14 <- subset(d, TartaricAcid < 14)
+boxplot(TartaricAcid~Grade,data=tartaricgreater14,main="Greater Than 14",xlab="Grade",
+            ylab="Tartaric Acid ",col="orange",border="brown")
+by(tartaricgreater14[,"TartaricAcid"] , tartaricgreater14[,"Grade"],table)
+boxplot(TartaricAcid~Grade,data=tartaricless14,main="Less Than 14",xlab="Grade",
+            ylab="Tartaric Acid ",col="orange",border="brown")
+```
+
+```{r}
+aceticgreater14 <- subset(d, Acetic >= 1.05)
+aceticless14 <- subset(d, Acetic < 1.05)
+boxplot(Acetic~Grade,data=aceticgreater14,main="Greater Than 1.05",xlab="Grade",
+            ylab="Acetic Acid ",col="orange",border="brown")
+by(aceticgreater14[,"Acetic"] , aceticgreater14[,"Grade"],table)
+boxplot(Acetic~Grade,data=aceticless14,main="Less Than 1.05",xlab="Grade",
+            ylab="Acetic Acid ",col="orange",border="brown")
+```
+
+```{r}
+par(mgp=c(1, 1, 0), mar=c(3, 3, 3, 1))
+ggplot() + geom_point(data = x2, aes(x = Citric, y = Acetic, shape = as.factor(Grade), color = as.factor(Grade))) 
+ggplot() + geom_point(data = x2, aes(x = Citric, y = TartaricAcid, shape = as.factor(Grade), color = as.factor(Grade))) 
+ggplot() + geom_point(data = x2, aes(x = Citric, y = TartaricAcid, shape = as.factor(Grade), color = as.factor(Grade))) 
+
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(data = d,
+       aes(y = TartaricAcid , x = Acetic,
+           color = as.factor(Grade))) +
+  #geom_point(alpha = 0.8, size = 0.5) +
+  geom_smooth(method = "lm", se = FALSE,size=2)  +
+  #facet_wrap(~rating) +
+  scale_color_brewer(type='seq',
+                   guide=guide_legend(title='Quality'))
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(data = d,
+       aes(y = TartaricAcid , x = Citric,
+           color = as.factor(Grade))) +
+  #geom_point(alpha = 0.8, size = 0.5) +
+  geom_smooth(method = "lm", se = FALSE,size=2)  +
+  #facet_wrap(~rating) +
+  scale_color_brewer(type='seq',
+                   guide=guide_legend(title='Quality'))
+```
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+ggplot(data = d,
+       aes(y = Acetic , x = Citric,
+           color = as.factor(Grade))) +
+  #geom_point(alpha = 0.8, size = 0.5) +
+  geom_smooth(method = "lm", se = FALSE,size=2)  +
+  #facet_wrap(~rating) +
+  scale_color_brewer(type='seq',
+                   guide=guide_legend(title='Quality'))
+```
