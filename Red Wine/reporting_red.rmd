@@ -56,7 +56,7 @@ par(mgp=c(2, 1, 0), mar=c(3, 3, 3, 1), xaxs="i", yaxs="i", cex=.7)
 for(i in colnames(d)){
   x <- d[,i]
   if(is.numeric(x) && i != "Grade" & i != "producer code"){
-     h<- hist(x, main=i, breaks=20,xlab="")
+     h<- hist(x, main=i, breaks=30,xlab="")
      xfit<-seq(min(x),max(x),length=80)
      yfit<-dnorm(xfit,mean=mean(x),sd=sd(x))
      yfit <- yfit*diff(h$mids[1:2])*length(x)
@@ -94,7 +94,7 @@ for (i in colnames(d) ){
 par(mgp=c(2, 1, 0), mar=c(3, 3, 3, 1), xaxs="i", yaxs="i", cex=.7)
 for(i in colnames(d)){
   x <- d[,i]
-  if(i == "Citric"){
+  if(is.numeric(d[,i]) && i != "Grade" && i != "producer code"){
         for (j in (1:length(x))){
 	     if (x[j]!=0) x[j]<- log10(x[j])}
         h<- hist(x, main=i, breaks=30,xlab="")}
