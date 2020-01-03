@@ -74,3 +74,15 @@ If we look at the boxplot of the Residual sugar concentration, Sugar Greater tha
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/sugargreater6.8.png">
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/sugarless6.8.png">
 </p>
+
+No one gave 3 or 8 rating for sugar greater than 6.8. Even the number of wine with sugar concentration greater than 6.8 is lower in number. The distribution of wine quality with sugar concentration less than 6.8 is same as the distribution of overall wine quality with respect to quality.
+
+<h3> Conclusion </h3>
+May be this is not the right component for analyzing wine quality.
+
+<h3> Alcohol Study </h3>
+Let's examine the distribution of alcohol in different types of wine.
+<p align="center">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/alcoholdistribution.png">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/alcoholdistributionboxplot.png">
+</p>
