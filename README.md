@@ -72,5 +72,5 @@ If we look at the boxplot of the Residual sugar concentration, Sugar Greater tha
 <p align="center">
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/sugarboxplot.png">
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/sugargreater6.8.png">
-  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/sugarless6.8c.png">
+  <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/sugarless6.8.png">
 </p>
