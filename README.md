@@ -86,3 +86,5 @@ Let's examine the distribution of alcohol in different types of wine.
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/alcoholdistribution.png">
   <img width="250" height="250" src="https://github.com/ShamimaMoni/wine-quality-analysis/blob/master/Red%20Wine/images/alcoholdistributionboxplot.png">
 </p>
+
+The distribution of alcohol is not normally distributed. It has a long tail at the right side. If we look at the box plot we can see that with the increase in qualtiy the percentange of alcohol increases and it looks alike the box plot of citric acid vs quality. So let's examine the relation of alcohol and citric acid.
